@@ -14,13 +14,13 @@ jobs:
         run: |
           rm -rf source/js/plugins/twikoo.min.js
           curl -o source/js/plugins/twikoo.min.js -L https://unpkg.com/twikoo/dist/twikoo.min.js
-          sed 's/64,158,255/13,86,97/ig' source/js/plugins/twikoo.min.js
-          sed 's/a0cfff/33a6b8/ig' source/js/plugins/twikoo.min.js
-          sed 's/409eff/0089a7/ig' source/js/plugins/twikoo.min.js
-          sed 's/3a8ee6/0d5661/ig' source/js/plugins/twikoo.min.js
-          sed 's/c6e2ff/0d56614f/ig' source/js/plugins/twikoo.min.js
-          sed 's/ecf5ff/0d56610f/ig' source/js/plugins/twikoo.min.js
-          sed 's/dcdfe6/dce5e6/ig' source/js/plugins/twikoo.min.js
+          sed -i 's/64,158,255/13,86,97/Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/a0cfff/33a6b8/Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/409eff/0089a7/Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/3a8ee6/0d5661/Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/c6e2ff/0d56614f/Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/ecf5ff/0d56610f/Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/dcdfe6/dce5e6/Ig' source/js/plugins/twikoo.min.js
       
       - name: Push
         run: |
