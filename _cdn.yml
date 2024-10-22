@@ -311,11 +311,11 @@ gitalk:
   cdnjs: true
 twikoo:
   name: twikoo
-  file: dist/twikoo.min.js
-  version: 1.6.39
-  npm: true
+  file: source/js/plugins/twikoo.min.js
+  local: true
+  npm: false
   static: false
-  cdnjs: true
+  cdnjs: false
 waline_css:
   name: "@waline/client"
   cdnjs_name: waline
