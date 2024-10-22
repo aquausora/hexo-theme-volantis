@@ -1,0 +1,18 @@
+name: update-twikoo-js
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  update-twikoo-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: curl -o source/js/plugins/twikoo.min.js -L https://unpkg.com/twikoo/dist/twikoo.min.js
+      - run: sed 's/64,158,255/13,86,97/g' source/js/plugins/twikoo.min.js
+      - run: sed 's/a0cfff/33a6b8/g' source/js/plugins/twikoo.min.js
+      - run: sed 's/409eff/0089a7/g' source/js/plugins/twikoo.min.js
+      - run: sed 's/3a8ee6/0d5661/g' source/js/plugins/twikoo.min.js
+      - run: sed 's/c6e2ff/0d56614f/g' source/js/plugins/twikoo.min.js
+      - run: sed 's/ecf5ff/0d56610f/g' source/js/plugins/twikoo.min.js
+      - run: sed 's/dcdfe6/dce5e6/g' source/js/plugins/twikoo.min.js
