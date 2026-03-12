@@ -14,7 +14,7 @@ jobs:
         run: |
           rm -rf source/js/plugins/twikoo.min.js
           curl -o source/js/plugins/twikoo.min.js -L https://unpkg.com/twikoo/dist/twikoo.min.js
-          sed -i 's/ color: rgba\(64, 158, 255, 0.6\);\\n//Ig' source/js/plugins/twikoo.min.js
+          sed -i 's/color: rgba\(64, 158, 255, 0.6\);//Ig' source/js/plugins/twikoo.min.js
           sed -i 's/64,158,255/13,86,97/Ig' source/js/plugins/twikoo.min.js
           sed -i 's/a0cfff/33a6b8/Ig' source/js/plugins/twikoo.min.js
           sed -i 's/409eff/0089a7/Ig' source/js/plugins/twikoo.min.js
