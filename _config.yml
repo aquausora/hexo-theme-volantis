@@ -1,7 +1,6 @@
 
 # ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-# 这里是 7.0.0-alpha 分支
-# Breaking Change 会放到这个分支
+# 这里是 6.x 分支
 # ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
 ############################### Volantis ###############################
@@ -63,7 +62,7 @@ cdn_system:
     # Tip: 在本配置文件中 匹配以 "volantis-static" 开头的链接路径替换为该格式的前缀开头 prefix
     static:
       # CDN 链接前缀
-      prefix: https://unpkg.com/volantis-static@0.0.1660614606622
+      prefix: https://unpkg.com/volantis-static@0.0.1761982841160
       # volantis-static CDN 格式
       format: ${prefix}/libs/${name}/${file}
     # cdnjs
@@ -71,7 +70,7 @@ cdn_system:
     # Tip: 在本配置文件中 匹配以 "volantis-cdnjs" 开头的链接路径替换为该格式的前缀开头 prefix
     cdnjs:
       # CDN 链接前缀
-      prefix: https://cdn.bootcdn.net/ajax/libs
+      prefix: https://cdnjs.cloudflare.com/ajax/libs
       # cdnjs CDN 格式
       format: ${prefix}/${name}/${version}/${min_file}
   # ========================================================================
@@ -122,7 +121,6 @@ replace:
 # dns-prefetch preconnect x-dns-prefetch-control
 dns_prefetch:
   - https://unpkg.com
-  - https://cdn.bootcdn.net
 
 # 平滑滚动效果
 scroll_smooth: true
@@ -899,6 +897,16 @@ plugins:
     list_max_height: 320px # list max height
     list_folded: true
     autoHide: true    # hide automaticaly
+
+  # Pjax
+  pjax:
+    enable: true
+    cover: true          # 封面是否pjax处理 false：每次切换页面封面都重载，适合封面较少的情况 true：封面经过Pjax处理，适合封面较多的情况
+    timeout: 900         # The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.
+    cacheBust: false     # When set to true, Pjax appends a timestamp  to skip the browser cache.
+    exclude:             # 被屏蔽的 url 地址将不启用 pjax 跳转，可以在控制台下使用 window.location.pathname 获取
+      # - '/artitalk/'   # artitalk 不支持 pjax
+      # - '/bbtalk/'     # bbtalk 不支持 pjax
 
   # pace
   # An automatic web page progress bar.

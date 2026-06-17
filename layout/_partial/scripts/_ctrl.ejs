@@ -11,6 +11,9 @@
   if(theme.cover && theme.cover.height_scheme) {
     theme.cover_ctrl.enableCover = true;
   }
+  if(theme.plugins.pjax.enable&&theme.plugins.pjax.cover) {
+    theme.cover_ctrl.enableCover = true;
+  }
   if (theme.cover_ctrl.enableCover && page && page.cover) {
     theme.cover_ctrl.frontMatterCover = page.cover;
     if (is_home() && page.prev == 0 && theme.cover.height_scheme == 'full') {

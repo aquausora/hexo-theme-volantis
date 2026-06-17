@@ -29,9 +29,7 @@
 <% } %>
 
 <!-- internal -->
-<!-- 这里不能使用 Hexo 内置的 helper: js(theme.cdn.volantis_app) ， 会导致多加一个 config.site_root -->
 <script src="<%- theme.cdn.volantis_app %>"></script>
-
 
 <% if (theme.rightmenus.enable) { %>
   <%- partial('../../_plugins/rightmenus/layout') %>
@@ -148,9 +146,6 @@
 
 <%- partial('../../_plugins/slow-network/script') %>
 
-<% if (theme.structured_data && theme.structured_data.enable) { %>
-  <%- structured_data() %>
-<% } %>
 
 <% if (theme.plugins.tianliGPT.enable) { %>
   <%- partial('../../_plugins/tianligpt/script') %>
